@@ -3,9 +3,9 @@
 import upload from './atoms/upload/upload';
 import datebpicker from './molecules/datepicker/datepicker';
 import datepickerEvent from './molecules/datepicker-event/datepicker-event';
-import gallery from './molecules/gallery/gallery';
 import socialShare from './organisms/social/social-share';
 import svgIcons from '../icons/svg-icons';
+import nav from './molecules/nav/nav.js';
 
 svgIcons(); // Must run as soon as possible
 
@@ -13,9 +13,9 @@ const init = () => {
   upload();
   datebpicker();
   datepickerEvent();
-  gallery();
   socialShare();
   Tablesaw.init();
+  nav();
 
   $('.tlbx-sidebar div:nth-child(5) .tlbx-sidebar-item strong').text('Content');
   $('.tlbx-sidebar div:nth-child(6) .tlbx-sidebar-item strong').text('Utilities');
