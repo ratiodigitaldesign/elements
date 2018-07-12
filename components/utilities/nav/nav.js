@@ -7,7 +7,9 @@ const nav = () => {
 
   // cleans the whole menu of active/parent classes
   const resetMenu = () => {
-    $('.nav-main li').removeClass(activeClass).removeClass(parentClass);
+    $('.nav-main li')
+      .removeClass(activeClass)
+      .removeClass(parentClass);
   };
 
   // toggle mobile navigation
@@ -43,10 +45,14 @@ const nav = () => {
     const parents = $(this).parents();
 
     const parent = parents[2];
-    $(parent).removeClass(parentClass).removeClass(activeClass);
+    $(parent)
+      .removeClass(parentClass)
+      .removeClass(activeClass);
 
     const ancestor = parents[4];
-    $(ancestor).removeClass(parentClass).addClass(activeClass);
+    $(ancestor)
+      .removeClass(parentClass)
+      .addClass(activeClass);
   });
 
   /*
@@ -62,7 +68,9 @@ const nav = () => {
     $(parent).addClass(activeClass);
 
     const ancestor = parents[2];
-    $(ancestor).addClass(parentClass).removeClass(activeClass);
+    $(ancestor)
+      .addClass(parentClass)
+      .removeClass(activeClass);
   });
 
   // bind action to mobile menu toggle
@@ -73,7 +81,7 @@ const nav = () => {
   /*
     when clicking a link on the header with the navigation already open,
     let time for the menu to close and re-open at the right spot
-  
+
   $('.nav-toggle .nav-header a').on('click', function (e) {
     const id = $(this).parent().attr('id');
     if ($(`.nav-main .${id} ul`).length > 0) {
@@ -102,7 +110,7 @@ const nav = () => {
   });
 
   // Bind action to the desktop hamburger (next to breadcrumbs)
-  $('#nav-burger').on('click', () => {
+  $('#nav-toggle').on('click', () => {
     toggleDesktopMenu();
   });
 };
