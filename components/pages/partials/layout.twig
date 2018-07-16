@@ -5,20 +5,24 @@
   {% include '@components/header/header.twig' %}
 {% endblock %}
 
+{% if not isHomepage %}
+{% block breadcrumb %}
+  <div class="breadcrumb-container">
+    <div>{% include '@utilities/nav-toggle/nav-toggle.twig' %}</div>
+    {% include '@components/breadcrumbs/breadcrumbs.twig' %}
+  </div>
+{% endblock %}
+{% endif %}
+
+
 <div class="main-container">
-  <div class="nav-toggle-layout nav-aside-layout">
+  <div{% if not isHomepage %} class="nav-toggle-layout nav-aside-layout"{% endif %}>
 
     {% block nav %}
       {% include '@utilities/nav/nav.twig' %}
     {% endblock %}
 
     <div class="w-100 pb-5">
-      {% block breadcrumb %}
-        <div class="container nav-toggle-container">
-          <div>{% include '@utilities/nav/nav-toggle.twig' %}</div>
-          {% include '@components/breadcrumbs/breadcrumbs.twig' %}
-        </div>
-      {% endblock %}
 
       {% block main %}
         <main id="main" role="main" class="content {% block grid %}container-grid{% endblock %}">
@@ -28,9 +32,11 @@
 
     </div>
 
+    {% if not isHomepage %}
     <aside class="nav-aside-wrapper">
       {% include '@utilities/nav-aside/nav-aside.twig' %}
     </aside>
+    {% endif %}
   </div>
 
   {% block footer_container %}
