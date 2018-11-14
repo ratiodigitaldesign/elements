@@ -1,0 +1,53 @@
+{% set isSpecial = true %}
+{% extends "@templates/base/base.twig" %}
+
+{% block header %}
+  {% include '@organisms/header/header-light.twig' with { site_title: 'Event title', dropdown: true } %}
+{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb-container">
+  {% include '@molecules/breadcrumb/breadcrumb.twig' %}
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-full py-5">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h1>Accred</h1>
+        <p>Gestion des droits d’accès aux ressources de l’EPFL</p>
+        <p><a href="#">En savoir plus</a></p>
+      </div>
+    </div>
+
+    <div class="links-group links-group-teaser col-md-6 mb-4">
+      <h5 id="links-group-title">Gérer et auditer</h5>
+      <nav
+        class="nav flex-column flex-wrap align-items-start"
+        role="navigation"
+        aria-labelledby="links-group-title"
+      >
+        <a class="nav-link link-pretty" href="#">Ses propres accréditations (Xavier Alexandre)</a>
+        <a class="nav-link link-pretty" href="#">Les accréditations d'une autre personne</a>
+        <a class="nav-link link-pretty" href="#">Les accréditations et signatures associées à une unité</a>
+      </nav>
+    </div>
+
+    <div class="links-group links-group-teaser col-md-6">
+      <h5 id="links-group-title">Suivi des demandes en cours</h5>
+      <nav
+        class="nav flex-column flex-wrap align-items-start"
+        role="navigation"
+        aria-labelledby="links-group-title"
+      >
+        <p><em>Pas de demandes pour l'instant</em></p>
+        <a class="nav-link link-pretty" href="#">Historique</a>
+      </nav>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
