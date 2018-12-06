@@ -18,8 +18,12 @@ import search from './molecules/search/search.js';
 import coursebook from './content-types/coursebook/coursebook.js';
 import cookieconsent, {get_cookieconsent_config} from './organisms/cookie-consent/cookie-consent.js';
 import anchors from './anchors';
-
 import guide from './guide.js';
+
+import accredRevalidations from './pages/accred-revalidations/accred-revalidations.js';
+import collapseGoupUnit from './molecules/collapse-group/collapse-group-unit.js';
+import selectSearch from './atoms/select/select-search.js';
+
 
 svgIcons(); // Must run as soon as possible
 
@@ -43,6 +47,10 @@ const init = () => {
 
   guide();
   anchors();
+
+  accredRevalidations();
+  collapseGoupUnit();
+  selectSearch();
 
   // Init polyfill for Object Fit on IE11
   const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

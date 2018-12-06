@@ -18,12 +18,13 @@
   ],
   "vendors": {
     "css": [
-      "node_modules/pickadate/lib/themes/classic.date.css",
+      "node_modules/pickadate/lib/themes/classic.date.css", 
       "node_modules/flickity/dist/flickity.css",
       "node_modules/flickity-fullscreen/fullscreen.css",
       "node_modules/intro.js/introjs.css",
       "node_modules/tablesaw/dist/tablesaw.css",
-      "node_modules/cookieconsent/build/cookieconsent.min.css"
+      "node_modules/cookieconsent/build/cookieconsent.min.css",
+      "node_modules/selectize.js/dist/css/selectize.bootstrap3.css"
     ],
     "js": [
       "node_modules/bootstrap/dist/js/bootstrap.bundle.js",

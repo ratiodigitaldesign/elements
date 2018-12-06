@@ -1,0 +1,13 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.sticky-div {
+  width: inherit;
+  max-width: inherit;
+  background: white;
+  transition: box-shadow 0.5s;
+}
