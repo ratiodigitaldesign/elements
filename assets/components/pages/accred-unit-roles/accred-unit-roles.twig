@@ -4,7 +4,7 @@
 {% set nav_aside_active = 0 %}
 
 {% block header %}
-{% include '@organisms/header/header-light.twig' with { site_title: 'Event title', dropdown: true } %}
+{% include '@organisms/header/header-light.twig' with { site_title: 'Event title', header: header_accred } %}
 {% endblock %}
 {% block breadcrumb %}
 <div class="breadcrumb-container">
