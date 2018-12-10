@@ -8,7 +8,6 @@ export default () => {
   });
 
   $("input:checkbox").change(function() {
-    console.log("change");
     var current_group = $(this).attr("group");
     if ($('.group-checkbox:checked[group="' + current_group + '"]').length == $('.group-checkbox[group="' + current_group + '"]').length) {
       $("#" + current_group).prop('checked', true);
@@ -46,7 +45,6 @@ export default () => {
 
   function stickyNav() {
     if ($(window).scrollTop() > yourHeaderPos) {
-      console.log(wrapper.width());
       stick_nav.addClass("sticky");
       // Fixing fixed div bug
       stick_nav.width("100%");
