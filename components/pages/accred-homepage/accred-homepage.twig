@@ -1,7 +1,7 @@
 {% set isSpecial = true %}
 {% extends "@templates/base/base.twig" %}
 {% block header %}
-{% include '@organisms/header/header-light.twig' with { site_title: 'Event title', dropdown: true } %}
+  {% include '@organisms/header/header-light.twig' with { site_title: 'Accred', header: header_accred } %}
 {% endblock %}
 {% block breadcrumb %}
 <div class="breadcrumb-container">
